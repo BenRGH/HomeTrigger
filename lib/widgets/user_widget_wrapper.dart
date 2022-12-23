@@ -5,14 +5,15 @@ import 'package:flutter/material.dart';
 // in an array for the home screen to build.
 
 class UserWidgetWrapper extends StatefulWidget {
-  final bool _devOnly = false;
   final bool _pinned = false; // local tracking of pinned state
+  final bool devOnly;
   final Widget child;
   final int width; // in tiles, 1-4 columns
   final int height; // in tiles, 1-8 rows
 
   const UserWidgetWrapper({
     super.key,
+    required this.devOnly,
     required this.child,
     required this.width,
     required this.height,

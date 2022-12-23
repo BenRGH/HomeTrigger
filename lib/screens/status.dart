@@ -13,11 +13,13 @@ class StatusScreen extends StatelessWidget {
       crossAxisSpacing: 4,
       children: UserWidgets.values
           .map(
-            (uw) => StaggeredGridTile.count(
-              crossAxisCellCount: uw.widget.width,
-              mainAxisCellCount: uw.widget.height,
-              child: uw.widget,
-            ),
+            (uw) => !uw.widget.devOnly
+                ? StaggeredGridTile.count(
+                    crossAxisCellCount: uw.widget.width,
+                    mainAxisCellCount: uw.widget.height,
+                    child: uw.widget,
+                  )
+                : Container(),
           )
           .toList(),
     );

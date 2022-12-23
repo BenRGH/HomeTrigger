@@ -2,20 +2,29 @@ import '../widgets/widgets.dart';
 
 enum UserWidgets {
   // status widgets
-  time, // dev test (add flag for dev widgets)
+  time, // dev test
+  weather,
 
   // trigger widgets
 }
 
 extension UserWidgetsExt on UserWidgets {
   UserWidgetWrapper get widget {
-    // TODO(me): put user widget class here
     switch (this) {
+      // status widgets
       case UserWidgets.time:
         return const UserWidgetWrapper(
-          width: 3,
+          devOnly: false,
+          width: 2,
           height: 2,
           child: UserWidgetTime(),
+        );
+      case UserWidgets.weather:
+        return const UserWidgetWrapper(
+          devOnly: false,
+          width: 2,
+          height: 2,
+          child: UserWidgetWeather(),
         );
     }
   }
