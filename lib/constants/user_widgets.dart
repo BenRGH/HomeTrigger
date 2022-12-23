@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../widgets/widgets.dart';
 
 enum UserWidgets {
@@ -10,13 +8,13 @@ enum UserWidgets {
 }
 
 extension UserWidgetsExt on UserWidgets {
-  Widget get widget {
+  UserWidgetWrapper get widget {
     // TODO(me): put user widget class here
     switch (this) {
       case UserWidgets.time:
         return const UserWidgetWrapper(
-          width: 4,
-          height: 1,
+          width: 3,
+          height: 2,
           child: UserWidgetTime(),
         );
     }

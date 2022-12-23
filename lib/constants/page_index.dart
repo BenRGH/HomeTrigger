@@ -43,8 +43,4 @@ extension PageIndexExt on PageIndex {
         return const TriggerScreen();
     }
   }
-
-// PageIndex get fromValue(val) {
-//   return PageIndex.
-// }
 }
