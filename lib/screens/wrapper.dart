@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_trigger/constants/constants.dart';
 import 'package:home_trigger/utils/page_builder.dart';
 
 class WrapperScreen extends StatefulWidget {
@@ -23,20 +24,7 @@ class _WrapperScreenState extends State<WrapperScreen> {
       appBar: AppBar(
         title: const Text("Home Trigger"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Page index:',
-            ),
-            Text(
-              '$_pageIndex',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
+      body: PageIndexExt(PageIndex.values[_pageIndex]).widget,
       bottomNavigationBar: BottomNavigationBar(
         items: pageBuilder(),
         currentIndex: _pageIndex,

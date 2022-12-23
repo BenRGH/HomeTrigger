@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:home_trigger/screens/status.dart';
+import 'package:home_trigger/screens/trigger.dart';
+
+import '../screens/home.dart';
 
 enum PageIndex {
   home,
@@ -28,4 +32,19 @@ extension PageIndexExt on PageIndex {
         return const Icon(Icons.auto_fix_high);
     }
   }
+
+  Widget get widget {
+    switch (this) {
+      case PageIndex.home:
+        return const HomeScreen();
+      case PageIndex.status:
+        return const StatusScreen();
+      case PageIndex.trigger:
+        return const TriggerScreen();
+    }
+  }
+
+// PageIndex get fromValue(val) {
+//   return PageIndex.
+// }
 }
