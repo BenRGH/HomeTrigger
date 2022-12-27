@@ -5,10 +5,13 @@ class UserWidgetTemp extends StatelessWidget {
 
   const UserWidgetTemp({super.key, required this.room});
 
+  int _getTemp() {
+    // TODO(me): get temp from somewhere
+    return 20;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("temp in: $room"),
-    );
+    return Text("$room temp: ${_getTemp()}");
   }
 }

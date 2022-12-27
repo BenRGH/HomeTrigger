@@ -41,7 +41,7 @@ extension UserWidgetsExt on UserWidgets {
           devOnly: false,
           width: 1,
           height: 1,
-          child: UserWidgetTemp(room: "bedroom idk"),
+          child: UserWidgetTemp(room: "bedroom"),
         );
     }
   }
