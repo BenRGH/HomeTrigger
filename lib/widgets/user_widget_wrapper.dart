@@ -15,6 +15,7 @@ class UserWidgetWrapper extends StatefulWidget {
     super.key,
     required this.devOnly,
     required this.child,
+    // TODO(me): gonna be a faff but we want these resizable
     required this.width,
     required this.height,
   });
@@ -31,8 +32,28 @@ class _UserWidgetWrapperState extends State<UserWidgetWrapper> {
   @override
   Widget build(BuildContext context) {
     // TODO(me): styling and pinning
-    return Center(
-      child: widget.child,
+    return InkWell(
+      borderRadius: BorderRadius.circular(10),
+      splashColor: Colors.blue,
+      onLongPress: () {
+        // TODO(me): show pinning dialog
+      },
+      child: Ink(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: -2,
+              blurRadius: 7,
+            ),
+          ],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Center(
+          child: widget.child,
+        ),
+      ),
     );
   }
 }

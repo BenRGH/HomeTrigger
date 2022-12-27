@@ -5,11 +5,8 @@ class UserWidgetWeather extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepOrange,
-      child: const Center(
-        child: Text("weather"),
-      ),
+    return const Center(
+      child: Text("weather"),
     );
   }
 }

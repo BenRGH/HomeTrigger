@@ -22,6 +22,7 @@ class _WrapperScreenState extends State<WrapperScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        shadowColor: Colors.transparent,
         title: const Text("Home Trigger"),
       ),
       body: PageIndexExt(PageIndex.values[_pageIndex]).widget,

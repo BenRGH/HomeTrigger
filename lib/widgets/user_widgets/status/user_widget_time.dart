@@ -5,11 +5,8 @@ class UserWidgetTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepOrange,
-      child: const Center(
-        child: Text("time"),
-      ),
+    return const Center(
+      child: Text("time"),
     );
   }
 }
